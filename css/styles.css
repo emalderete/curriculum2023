@@ -7,3 +7,43 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
+
+body {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/*-------- Main Card ---------*/
+
+.mainCardContainer {
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainCard {
+    width: 30rem;
+    height: 80%;
+    border: 1px solid blue;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+
+/*-------- Secondary Card ---------*/
+
+.secondaryCard {
+    border: 1px solid red;
+    width: 50rem;
+    height: 76%;
+    background-color: #ffffff;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
