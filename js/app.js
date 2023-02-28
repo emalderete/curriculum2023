@@ -27,10 +27,10 @@ linkedinLink.addEventListener('mouseout', () => { cssSocialCorrectionOut(linkedi
 
 function cssSocialCorrectionIn(element) {
     element.classList.toggle('d-none');
-    social.style.margin = '0.5rem 8rem';
+    social.style.marginTop = '0.5rem';
 }
 
 function cssSocialCorrectionOut(element) {
     element.classList.toggle('d-none');
-    social.style.margin = '2.5rem 8rem';
+    social.style.marginTop = '2.5rem';
 }

@@ -18,7 +18,9 @@ body {
 
 
 /*---------- Efectos ----------*/
-
+.emphasis {
+    color: #76ce6a;
+}
 
 /*-------- Main Card ---------*/
 
@@ -32,14 +34,14 @@ body {
 }
 
 .mainCard {
-    width: 30rem;
+    width: 32vw;
     left: 9vw;
     height: 80%;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0px 0px 15px #0000004a;
     position: absolute;
-    z-index: 5;
+    z-index: 3;
 }
 
 .profileImage {
@@ -92,15 +94,28 @@ body {
 }
 
 
+
+
 /*-------- Secondary Card ---------*/
 
 .secondaryCard {
     z-index: 4;
-    width: 50rem;
+    width: 51.3vw;
     right: 7.7vw;
     height: 76%;
     background-color: #ffffff;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     position: absolute;
+}
+
+.aboutTitle {
+    font-size: 160%;
+    font-weight: 700;
+    padding: 2rem;
+    border: 1px solid red;
+}
+
+.basicDataContainer {
+    display: flex;
 }
