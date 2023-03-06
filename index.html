@@ -12,74 +12,92 @@
 </head>
 
 <body>
-    <div class="mainCardContainer">
-        <section class="mainCard">
-            <article class="profileImage">
-                <img id="profileImagePhoto" src="./img/background.jpg" alt="foto de perfil">
-            </article>
-            <article class="profileData">
-                <h1 id="fullName" class="text-center fw-lighter">Name Surname</h1>
-                <h5 class="text-center jobTitle">Web Developer</h5>
-                <div class="facebookDiv d-none">Facebook</div>
-                <div class="twitterDiv d-none">Twitter</div>
-                <div class="linkedinDiv d-none">LinkedIn</div>
-                <div class="instagramDiv d-none">Instagram</div>
-                <div class="githubDiv d-none">Github</div>
-                <div class="social d-flex justify-content-evenly">
-                    <a id="twitterLink" href="https://twitter.com/?lang=es" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a id="linkedinLink" href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a id="facebookLink" href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a id="instagramLink" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a id="githubLink" href="https://github.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
-                <div class="mainContactButtonContainer">
-                    <button class="mainContactButton" type="button">Contáctame</button>
-                </div>
-            </article>
-        </section>
-        <section class="secondaryCard">
-            <h2 class="title"><span class="emphasis">Acerca</span> de mi</h2>
-            <div class="basicDataContainer">
-                <div class="info"><b>Mi nombre es [Tu nombre], Desarrollador FullStack.</b><br>Soy una persona creativa, orientada a resultados, enfocada en el cliente, con una sólida trayectoria en desarrollo frontend empleando React y javascript, así como Node.js con Express para el desarrollo backend, y me encuentro en la búsqueda de nuevos desafíos que me permitan seguir creciendo profesionalmente.</div>
-                <div class="basicData">
-                    <div class="data">
-                        <div class="emphasisBox">Edad</div>
-                        <div id="age">"años"</div>
-                    </div>
-                    <div class="data">
-                        <div class="emphasisBox">Residencia</div>
-                        <div id="country">"pais"</div>
-                    </div>
-                    <div class="data">
-                        <div class="emphasisBox">E-mail</div>
-                        <div id="mail">"mail"</div>
-                    </div>
-                    <div class="data">
-                        <div class="emphasisBox">Ciudad</div>
-                        <div id="address">"direccion"</div>
-                    </div>
-                </div>
+    <div class="mainContainer">
+        <section class="mainCard moveCard">
+            <div id="handleSecondary" class="animPulses">
+                <button type="button"><i class="fa-solid fa-angle-right"></i></button>
+                <button type="button"><i class="fa-solid fa-angle-left d-none"></i></button>
             </div>
-            <h2 class="title"><span class="emphasis">Mis</span> Experiencias</h2>
-            <div class="experienceContainer">
-                <div class="experience">
-                    <div class="icons">
-                        <i class="fa-solid fa-code iconEmphasis"></i><i class="fa-solid fa-xmark"></i><i class="fa-brands fa-react iconEmphasis"></i>
+            <div class="presentation">
+                <article class="profileImage">
+                    <img id="profileImagePhoto" src="./img/background.jpg" alt="foto de perfil">
+                </article>
+                <article class="profileData">
+                    <h1 id="fullName" class="text-center fw-lighter">Name Surname</h1>
+                    <h5 class="text-center jobTitle">Web Developer</h5>
+                    <div class="facebookDiv d-none">Facebook</div>
+                    <div class="twitterDiv d-none">Twitter</div>
+                    <div class="linkedinDiv d-none">LinkedIn</div>
+                    <div class="instagramDiv d-none">Instagram</div>
+                    <div class="githubDiv d-none">Github</div>
+                    <div class="social d-flex justify-content-evenly">
+                        <a id="twitterLink" href="https://twitter.com/?lang=es" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a id="linkedinLink" href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a id="facebookLink" href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a id="instagramLink" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a id="githubLink" href="https://github.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </div>
-                    <h4 class="subtitle">Desarrollo React.js</h4>
-                    <p>Alrededor de 2 años de experiencia en desarrollo de aplicaciones web adaptables</p>
+                </article>
+            </div>
+            <button class="mainContactButton" type="button">Contáctame</button>
+        </section>
+        <section class="secondaryCard hideCard">
+            <div class="hideContent">
+                <h2 class="title"><span class="emphasis">Acerca</span> de mi</h2>
+                <div class="basicDataContainer">
+                    <div id="info"></div>
+                    <div class="basicData">
+                        <div class="data">
+                            <div class="emphasisBox">Edad</div>
+                            <div id="age">"años"</div>
+                        </div>
+                        <div class="data">
+                            <div class="emphasisBox">E-mail</div>
+                            <div id="mail">"mail"</div>
+                        </div>
+                        <div class="data">
+                            <div class="emphasisBox">Celular</div>
+                            <div id="phone">"cell"</div>
+                        </div>
+                        <div class="data">
+                            <div class="emphasisBox">Residencia</div>
+                            <div id="country">"pais"</div>
+                        </div>
+                        <div class="data">
+                            <div class="emphasisBox">Ciudad</div>
+                            <div id="address">"direccion"</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="experience">
-                    <div>
-                        <i class="fa-solid fa-headset iconEmphasis icons"></i>
+                <h2 class="title"><span class="emphasis">Mis</span> Experiencias</h2>
+                <div class="experienceContainer">
+                    <div class="experience">
+                        <div class="icons">
+                            <i class="fa-solid fa-code iconEmphasis"></i><i class="fa-solid fa-xmark"></i><i class="fa-brands fa-react iconEmphasis"></i>
+                        </div>
+                        <h4 class="subtitle">Desarrollo web | React.js</h4>
+                        <p>Alrededor de 2 años de experiencia en desarrollo de aplicaciones web adaptables</p>
                     </div>
-                    <h4 class="subtitle">Atención al cliente</h4>
-                    <p>Cuento con 4 años de experiencia en el campo de la atención al cliente con excelente habilidades blandas y de comunicación.</p>
+                    <div class="experience">
+                        <div>
+                            <i class="fa-solid fa-headset iconEmphasis icons"></i>
+                        </div>
+                        <h4 class="subtitle">Atención al cliente</h4>
+                        <p>Cuento con 4 años de experiencia en el campo de la atención al cliente con excelente habilidades blandas y de comunicación.</p>
+                    </div>
+                    <div class="experience">
+                        <div class="icons">
+                            <i class="fa-brands fa-wordpress-simple iconEmphasis icons"></i>
+                        </div>
+                        <h4 class="subtitle">Diseño web | WordPress</h4>
+                        <p>Aventurándome recientemente en este mundo con 1 mes de experiencia en este campo</p>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 </body>
+<script src="./js/animations.js"></script>
 <script src="./js/app.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 

@@ -17,21 +17,85 @@ body {
 }
 
 
+/* ------- Definiciones de animaciones ------- */
+
+@keyframes pulses {
+    to {
+        transform: translateX(0.5rem)
+    }
+}
+
+@keyframes hideContent {
+    to {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes hideCard {
+    20% {
+        width: 51.3vw;
+        overflow: hidden;
+        border: none;
+        box-shadow: none;
+        left: 40vw;
+    }
+    100% {
+        width: 0%;
+        overflow: hidden;
+        border: none;
+        box-shadow: none;
+        left: 40vw;
+    }
+}
+
+@keyframes moveCard {
+    40% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(25vw);
+    }
+}
+
+
 /*---------- Efectos ----------*/
+
 .emphasis {
-    color: #76ce6a;
+    color: #e26561;
 }
 
 .emphasisBox {
-    background-color: #76ce6a;
+    background-color: #e26561;
     color: #ffffff;
     padding: 4px 8px;
     font-weight: 700;
 }
 
+.animPulsesReverse {
+    animation: pulsesReverse 1000ms infinite alternate;
+}
+
+.animPulses {
+    animation: pulses 1000ms infinite alternate;
+}
+
+.hideContent {
+    animation: hideContent 750ms forwards;
+}
+
+.hideCard {
+    animation: hideCard 2000ms forwards;
+}
+
+.moveCard {
+    animation: moveCard 2000ms forwards;
+}
+
+
 /*-------- Main Card ---------*/
 
-.mainCardContainer {
+.mainContainer {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -44,17 +108,25 @@ body {
     width: 32vw;
     left: 9vw;
     height: 80%;
-    background-color: #ffffff;
+    background-color: #edffed;
     border-radius: 5px;
     border: 1px solid #0000001c;
     box-shadow: 0px 0px 15px #0000004a;
     position: absolute;
     z-index: 5;
     overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.presentation {
+    height: inherit;
+    width: 100%;
 }
 
 .profileImage {
-    height: 50%;
+    height: 55%;
     border-bottom: 1px solid #0000001c;
     display: flex;
     align-items: center;
@@ -64,9 +136,8 @@ body {
 }
 
 #profileImagePhoto {
-    height: 150px;
-    width: 150px;
-    border-radius: 60px;
+    width: 30%;
+    border-radius: 40%;
     margin-top: 3rem;
     box-shadow: 0px 0px 5px #0000004d;
 }
@@ -78,14 +149,14 @@ body {
 }
 
 .profileData div {
-    color: #76ce6a;
+    color: #e26561;
     text-align: center;
 }
 
 .jobTitle {
     font-size: 120%;
     font-weight: 700;
-    color: #76ce6a;
+    color: #e26561;
 }
 
 .social {
@@ -99,19 +170,39 @@ body {
 }
 
 .social a:hover {
-    color: #76ce6a;
+    color: #e26561;
 }
 
 .mainContactButton {
-    padding: 1rem 4rem;
-    background-color: #76ce6a;
-    color: #ffffff;
-    border: none;
-    box-shadow: 0px 0px 5px #00000060;
+    width: 100%;
+    height: 3.5rem;
+    border: 1px solid #00000000;
+    border-top: 1px solid #0000001c;
     outline: none;
-    border-bottom-right-radius: 1rem;
-    border-top-left-radius: 1rem;
+    background-color: #00000000;
+    transition: 300ms;
 }
+
+.mainContactButton:hover {
+    background-color: #e26561;
+    color: #ffffff;
+    border: 1px solid #e26561;
+}
+
+#handleSecondary {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transition: 300ms;
+}
+
+#handleSecondary button {
+    border: none;
+    font-size: 2.1rem;
+    background-color: #00000000;
+    color: #e26561;
+}
+
 
 /*-------- Secondary Card ---------*/
 
@@ -120,7 +211,7 @@ body {
     width: 51.3vw;
     right: 7.7vw;
     height: 76%;
-    background-color: #ffffff;
+    background-color: #edffed;
     border: 1px solid #0000001c;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
@@ -139,7 +230,7 @@ body {
     display: flex;
 }
 
-.info {
+#info {
     width: 50%;
     padding: 0 1rem;
     font-size: 95%;
@@ -161,14 +252,15 @@ body {
 .experienceContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .iconEmphasis {
-    background-color: #76ce6a;
+    background-color: #e26561;
     padding: 1rem;
     border-radius: 2rem;
     margin: 0 1rem;
+    color: #ffffff;
 }
 
 .icons {
@@ -190,6 +282,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    border-left: 1px solid #0000001c;
+    border-right: 1px solid #0000001c;
 }
 
 .experience p {
