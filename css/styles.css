@@ -25,12 +25,18 @@ body {
     }
 }
 
-@keyframes hideContent {
-    to {
+
+/*@keyframes animShowContent {
+    70% {
         opacity: 0;
         pointer-events: none;
     }
+    to {
+        opacity: 1;
+        pointer-events: all;
+    }
 }
+
 
 @keyframes hideCard {
     20% {
@@ -51,12 +57,12 @@ body {
 
 @keyframes moveCard {
     40% {
-        transform: translateX(0);
+        left: 32vw;
     }
     100% {
-        transform: translateX(25vw);
+        left: 9vw;
     }
-}
+}*/
 
 
 /*---------- Efectos ----------*/
@@ -72,24 +78,35 @@ body {
     font-weight: 700;
 }
 
-.animPulsesReverse {
-    animation: pulsesReverse 1000ms infinite alternate;
-}
-
 .animPulses {
     animation: pulses 1000ms infinite alternate;
 }
 
-.hideContent {
-    animation: hideContent 750ms forwards;
+.showContent {
+    /* animation: hideContent 750ms forwards reverse; */
+    opacity: 1!important;
+    pointer-events: all!important;
 }
 
-.hideCard {
-    animation: hideCard 2000ms forwards;
+
+/* .animShowContent {
+    animation: animShowContent 2000ms forwards;
+} */
+
+.showCard {
+    /* animation: hideCard 2000ms forwards reverse; */
+    width: 51.3vw!important;
+    right: 7vw!important;
+    overflow: auto!important;
 }
 
 .moveCard {
-    animation: moveCard 2000ms forwards;
+    /* animation: moveCard 2000ms forwards; */
+    left: 9vw!important;
+}
+
+.flipCard {
+    transform: rotateY(180deg);
 }
 
 
@@ -106,7 +123,8 @@ body {
 
 .mainCard {
     width: 32vw;
-    left: 9vw;
+    /* left: 9vw; */
+    left: 32vw;
     height: 80%;
     background-color: #edffed;
     border-radius: 5px;
@@ -118,6 +136,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    transition: 1500ms;
 }
 
 .presentation {
@@ -208,15 +227,26 @@ body {
 
 .secondaryCard {
     z-index: 4;
-    width: 51.3vw;
-    right: 7.7vw;
+    /* width: 51.3vw; */
+    width: 0%;
+    /* right: 7.7vw; */
+    left: 40vw;
     height: 76%;
     background-color: #edffed;
     border: 1px solid #0000001c;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     position: absolute;
-    overflow: auto;
+    /* overflow: auto; */
+    overflow: hidden;
+    transition: 1300ms;
+}
+
+.content {
+    opacity: 0;
+    pointer-events: none;
+    padding-left: 0.5rem;
+    transition: 150ms;
 }
 
 .title {

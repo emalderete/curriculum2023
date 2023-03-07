@@ -43,4 +43,50 @@ function cssSocialCorrectionOut(element) {
 }
 // Fin de animaciones de redes sociales.
 
-// Inicio de animación de apertura y cierre de la tarjeta secundaria.
+/** Inicio de animación de apertura y cierre de la tarjeta secundaria.
+ * Definición de estados personalizados */
+
+let stateSecondCard = false;
+
+function toggleSecondCard(newState) {
+    stateSecondCard = newState;
+    let state = new CustomEvent('secondCard', { detail: stateSecondCard });
+    document.dispatchEvent(state);
+}
+
+// function testingSecondCardState() {
+//     stateSecondCard ? toggleSecondCard(false) : toggleSecondCard(true);
+// }
+
+// document.addEventListener('secondCard', (event) => { console.log("el evento cambio a " + event.detail) });
+
+/** Se realiza un debug en el código para confirmar que trabaja correctamente, el mismo funciona devolviendo por consola el mensaje
+ * "el evento cambio a true / false" dependiendo del click que se haya realizado sobre el botón desplegable en el lado
+ * derecho de la tarjeta principal. */
+
+// Declaramos las variables que invocan a los elementos que serán modificados con un cambio de estado
+
+let mainCard = document.querySelector('.mainCard');
+let secondaryCard = document.querySelector('.secondaryCard');
+let openSecButton = document.querySelector('#openSecButton');
+let closeSecButton = document.querySelector('#closeSecButton');
+let secContent = document.querySelector('#content');
+
+// Desarrollamos el escuchador de eventos que detonará los cambios.
+
+document.addEventListener('secondCard', () => {
+    mainCard.classList.toggle('moveCard');
+    mainCard.classList.toggle('reverse');
+    secondaryCard.classList.toggle('showCard');
+    openSecButton.classList.toggle('d-none');
+    closeSecButton.classList.toggle('d-none');
+    stateSecondCard ? setTimeout(() => { secContent.classList.toggle('showContent') }, 1000) : secContent.classList.toggle('showContent');
+});
+
+/** Desarrollamos la función disparadora del evento,
+ * esta función es llamada desde el botón en ángulo en el lado
+ * derecho de la tarjeta principal*/
+
+function secondaryCardHandler() {
+    stateSecondCard ? toggleSecondCard(false) : toggleSecondCard(true);
+}

@@ -13,10 +13,13 @@
 
 <body>
     <div class="mainContainer">
-        <section class="mainCard moveCard">
+        <section class="mainCard">
+            <div>
+
+            </div>
             <div id="handleSecondary" class="animPulses">
-                <button type="button"><i class="fa-solid fa-angle-right"></i></button>
-                <button type="button"><i class="fa-solid fa-angle-left d-none"></i></button>
+                <button id="openSecButton" type="button" onclick="secondaryCardHandler()"><i class="fa-solid fa-angle-right"></i></button>
+                <button id="closeSecButton" class="d-none" type="button" onclick="secondaryCardHandler()"><i class="fa-solid fa-angle-left"></i></button>
             </div>
             <div class="presentation">
                 <article class="profileImage">
@@ -41,8 +44,8 @@
             </div>
             <button class="mainContactButton" type="button">Contáctame</button>
         </section>
-        <section class="secondaryCard hideCard">
-            <div class="hideContent">
+        <section class="secondaryCard">
+            <div id="content" class="content">
                 <h2 class="title"><span class="emphasis">Acerca</span> de mi</h2>
                 <div class="basicDataContainer">
                     <div id="info"></div>
