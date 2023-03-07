@@ -45,7 +45,7 @@ function cssSocialCorrectionOut(element) {
 
 /** Inicio de animación de apertura y cierre de la tarjeta secundaria.
  * Definición de estados personalizados */
-
+let handleFlip = document.querySelector('#handleFlip')
 let stateSecondCard = false;
 
 function toggleSecondCard(newState) {
@@ -80,6 +80,7 @@ document.addEventListener('secondCard', () => {
     secondaryCard.classList.toggle('showCard');
     openSecButton.classList.toggle('d-none');
     closeSecButton.classList.toggle('d-none');
+    handleFlip.classList.toggle('d-none');
     stateSecondCard ? setTimeout(() => { secContent.classList.toggle('showContent') }, 1000) : secContent.classList.toggle('showContent');
 });
 
@@ -89,4 +90,30 @@ document.addEventListener('secondCard', () => {
 
 function secondaryCardHandler() {
     stateSecondCard ? toggleSecondCard(false) : toggleSecondCard(true);
+}
+
+/**
+ * Desarrollamos la animación de volteo de la tarjeta principal.
+ * primero definimos el nuevo estado.
+ */
+
+let flipped = false;
+
+function toggleFlip(newState) {
+    flipped = newState;
+    let state = new CustomEvent('flippedCard', { detail: flipped });
+    document.dispatchEvent(state);
+}
+
+// Ahora definimos las variables que faltan.
+let main = document.querySelector('.mainContainer');
+
+// Por último definimos un evento escuhcador y una función disparadora.
+
+document.addEventListener('flippedCard', () => {
+    main.classList.toggle('flipCard');
+});
+
+function toggleFlipHandler() {
+    flipped ? toggleFlip(false) : toggleFlip(true);
 }

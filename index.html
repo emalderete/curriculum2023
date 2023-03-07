@@ -13,13 +13,51 @@
 
 <body>
     <div class="mainContainer">
-        <section class="mainCard">
-            <div>
-
+        <section class="backroom">
+            <div id="reverseFlipButton">
+                <button type="button" onclick="toggleFlipHandler()"><i class="fa-solid fa-arrows-rotate"></i></button>
             </div>
+            <div>
+                <h2 class="title"><span class="emphasis">Mis</span> habilidades</h2>
+                <div class="skillsContainer">
+                    <div class="skill">
+                        <div>
+                            <i class="fa-solid fa-headset iconEmphasis icons"></i>
+                        </div>
+                        <h4 class="subtitle">Comunicación efectiva</h4>
+                        <p>Capacidad para transmitir información de manera clara y concisa, tanto oralmente como por escrito</p>
+                    </div>
+                    <div class="skill">
+                        <div>
+                            <i class="fa-solid fa-people-group iconEmphasis icons"></i>
+                        </div>
+                        <h4 class="subtitle">Trabajo en equipo</h4>
+                        <p>Capacidad para colaborar con otras personas en la consecución de objetivos comunes</p>
+                    </div>
+                    <div class="skill">
+                        <div>
+                            <i class="fa-solid fa-triangle-exclamation iconEmphasis icons"></i>
+                        </div>
+                        <h4 class="subtitle">Resolución de problemas</h4>
+                        <p>Creatividad: capacidad para generar ideas innovadoras y soluciones originales a los problemas, pensando fuera de lo convencional</p>
+                    </div>
+                    <div class="skill">
+                        <div>
+                            <i class="fa-solid fa-language iconEmphasis icons"></i>
+                        </div>
+                        <h4 class="subtitle">Ingles medio</h4>
+                        <p>Capaz de mantener una conversación oral simple en inglés y una muy buena comprensión de la forma escrita</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mainCard">
             <div id="handleSecondary" class="animPulses">
                 <button id="openSecButton" type="button" onclick="secondaryCardHandler()"><i class="fa-solid fa-angle-right"></i></button>
                 <button id="closeSecButton" class="d-none" type="button" onclick="secondaryCardHandler()"><i class="fa-solid fa-angle-left"></i></button>
+            </div>
+            <div id="handleFlip" class="animRotate">
+                <button id="flipButton" type="button" onclick="toggleFlipHandler()"><i class="fa-solid fa-arrows-rotate"></i></button>
             </div>
             <div class="presentation">
                 <article class="profileImage">
