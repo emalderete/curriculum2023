@@ -77,7 +77,7 @@ let secContent = document.querySelector('#content');
 document.addEventListener('secondCard', () => {
     mainCard.classList.toggle('moveCard');
     mainCard.classList.toggle('reverse');
-    secondaryCard.classList.toggle('showCard');
+    secondaryCard.classList.toggle('hideCard');
     openSecButton.classList.toggle('d-none');
     closeSecButton.classList.toggle('d-none');
     handleFlip.classList.toggle('d-none');
@@ -116,4 +116,15 @@ document.addEventListener('flippedCard', () => {
 
 function toggleFlipHandler() {
     flipped ? toggleFlip(false) : toggleFlip(true);
+}
+
+// Ahora solo falta definir la funcionalidad de los botones
+// para la vista móvil.
+
+let openMobile = document.querySelector('#openMobile');
+let closeMobile = document.querySelector('.mobileCloseButton');
+let mobileMenu = document.querySelector('.mobileMenu');
+
+function toggleMobile(){
+    mobileMenu.classList.toggle('hideMobile');
 }

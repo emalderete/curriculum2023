@@ -13,6 +13,63 @@
 
 <body>
     <div class="mainContainer">
+        <!--<section class="mobileMenu hideMobile text-light">
+            <div class="mobileCloseButton">
+                <button type="button" onclick="toggleMobile()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <h2 class="title borderWhite fontSize120"><span class="emphasis">Acerca</span> de mi</h2>
+                <div class="basicDataContainer fontSize75">
+                    <div class="info" class="borderWhite "></div>
+                    <div class="basicData">
+                        <div class="data borderWhite">
+                            <div class="emphasisBox">Edad</div>
+                            <div id="age">"años"</div>
+                        </div>
+                        <div class="data borderWhite">
+                            <div class="emphasisBox">E-mail</div>
+                            <div id="mail">"mail"</div>
+                        </div>
+                        <div class="data borderWhite">
+                            <div class="emphasisBox">Celular</div>
+                            <div id="phone">"cell"</div>
+                        </div>
+                        <div class="data borderWhite">
+                            <div class="emphasisBox">Residencia</div>
+                            <div id="country">"pais"</div>
+                        </div>
+                        <div class="data borderWhite">
+                            <div class="emphasisBox">Ciudad</div>
+                            <div id="address">"direccion"</div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="title borderWhite fontSize120"><span class="emphasis">Mis</span> Experiencias</h2>
+                <div class="experienceContainer fontSize75">
+                    <div class="experience borderWhite">
+                        <div class="icons">
+                            <i class="fa-solid fa-code iconEmphasis"></i><i class="fa-solid fa-xmark"></i><i
+                                class="fa-brands fa-react iconEmphasis"></i>
+                        </div>
+                        <h4 class="subtitle">Desarrollo web | React.js</h4>
+                        <p>Alrededor de 2 años de experiencia en desarrollo de aplicaciones web adaptables</p>
+                    </div>
+                    <div class="experience borderWhite">
+                        <div>
+                            <i class="fa-solid fa-headset iconEmphasis icons"></i>
+                        </div>
+                        <h4 class="subtitle">Atención al cliente</h4>
+                        <p>Cuento con 4 años de experiencia en el campo de la atención al cliente con excelente
+                            habilidades blandas y de comunicación.</p>
+                    </div>
+                    <div class="experience borderWhite">
+                        <div class="icons">
+                            <i class="fa-brands fa-wordpress-simple iconEmphasis icons"></i>
+                        </div>
+                        <h4 class="subtitle">Diseño web | WordPress</h4>
+                        <p>Aventurándome recientemente en este mundo con 1 mes de experiencia en este campo</p>
+                    </div>
+                </div>
+        </section>-->
         <section class="backroom">
             <div id="reverseFlipButton">
                 <button type="button" onclick="toggleFlipHandler()"><i class="fa-solid fa-arrows-rotate"></i></button>
@@ -25,7 +82,8 @@
                             <i class="fa-solid fa-headset iconEmphasis icons"></i>
                         </div>
                         <h4 class="subtitle">Comunicación efectiva</h4>
-                        <p>Capacidad para transmitir información de manera clara y concisa, tanto oralmente como por escrito</p>
+                        <p>Capacidad para transmitir información de manera clara y concisa, tanto oralmente como por
+                            escrito</p>
                     </div>
                     <div class="skill">
                         <div>
@@ -39,25 +97,33 @@
                             <i class="fa-solid fa-lightbulb iconEmphasis icons"></i>
                         </div>
                         <h4 class="subtitle">Creatividad</h4>
-                        <p>Capacidad para generar ideas innovadoras y soluciones originales a los problemas, pensando fuera de lo convencional</p>
+                        <p>Capacidad para generar ideas innovadoras y soluciones originales a los problemas, pensando
+                            fuera de lo convencional</p>
                     </div>
                     <div class="skill">
                         <div>
                             <i class="fa-solid fa-language iconEmphasis icons"></i>
                         </div>
                         <h4 class="subtitle">Ingles medio</h4>
-                        <p>Capaz de mantener una conversación oral simple en inglés y una muy buena comprensión de la forma escrita</p>
+                        <p>Capaz de mantener una conversación oral simple en inglés y una muy buena comprensión de la
+                            forma escrita</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="mainCard">
             <div id="handleSecondary" class="animPulses">
-                <button id="openSecButton" type="button" onclick="secondaryCardHandler()"><i class="fa-solid fa-angle-right"></i></button>
-                <button id="closeSecButton" class="d-none" type="button" onclick="secondaryCardHandler()"><i class="fa-solid fa-angle-left"></i></button>
+                <button id="openSecButton" type="button" onclick="secondaryCardHandler()"><i
+                        class="fa-solid fa-angle-right"></i></button>
+                <button id="closeSecButton" class="d-none" type="button" onclick="secondaryCardHandler()"><i
+                        class="fa-solid fa-angle-left"></i></button>
             </div>
             <div id="handleFlip" class="animRotate">
-                <button id="flipButton" type="button" onclick="toggleFlipHandler()"><i class="fa-solid fa-arrows-rotate"></i></button>
+                <button id="flipButton" type="button" onclick="toggleFlipHandler()"><i
+                        class="fa-solid fa-arrows-rotate"></i></button>
+            </div>
+            <div class="openMobile">
+                <button type="button" onclick="toggleMobile()"><i class="fa-solid fa-bars"></i></button>
             </div>
             <div class="presentation">
                 <article class="profileImage">
@@ -72,17 +138,22 @@
                     <div class="instagramDiv d-none">Instagram</div>
                     <div class="githubDiv d-none">Github</div>
                     <div class="social d-flex justify-content-evenly">
-                        <a id="twitterLink" href="https://twitter.com/?lang=es" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        <a id="linkedinLink" href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a id="facebookLink" href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a id="instagramLink" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a id="githubLink" href="https://github.com/" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a id="twitterLink" href="https://twitter.com/?lang=es" rel="noopener noreferrer"
+                            target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a id="linkedinLink" href="https://www.linkedin.com/" rel="noopener noreferrer"
+                            target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a id="facebookLink" href="https://www.facebook.com/" rel="noopener noreferrer"
+                            target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a id="instagramLink" href="https://www.instagram.com/" rel="noopener noreferrer"
+                            target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a id="githubLink" href="https://github.com/" rel="noopener noreferrer" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
                     </div>
                 </article>
             </div>
             <button class="mainContactButton" type="button">Contáctame</button>
         </section>
-        <section class="secondaryCard">
+        <section class="secondaryCard hideCard">
             <div id="content" class="content">
                 <h2 class="title"><span class="emphasis">Acerca</span> de mi</h2>
                 <div class="basicDataContainer">
@@ -114,7 +185,8 @@
                 <div class="experienceContainer">
                     <div class="experience">
                         <div class="icons">
-                            <i class="fa-solid fa-code iconEmphasis"></i><i class="fa-solid fa-xmark"></i><i class="fa-brands fa-react iconEmphasis"></i>
+                            <i class="fa-solid fa-code iconEmphasis"></i><i class="fa-solid fa-xmark"></i><i
+                                class="fa-brands fa-react iconEmphasis"></i>
                         </div>
                         <h4 class="subtitle">Desarrollo web | React.js</h4>
                         <p>Alrededor de 2 años de experiencia en desarrollo de aplicaciones web adaptables</p>
@@ -124,7 +196,8 @@
                             <i class="fa-solid fa-headset iconEmphasis icons"></i>
                         </div>
                         <h4 class="subtitle">Atención al cliente</h4>
-                        <p>Cuento con 4 años de experiencia en el campo de la atención al cliente con excelente habilidades blandas y de comunicación.</p>
+                        <p>Cuento con 4 años de experiencia en el campo de la atención al cliente con excelente
+                            habilidades blandas y de comunicación.</p>
                     </div>
                     <div class="experience">
                         <div class="icons">
